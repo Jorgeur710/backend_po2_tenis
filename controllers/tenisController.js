@@ -15,7 +15,7 @@ const getMatchesEnded= async(req,res)=>{
        
     res.status(200).send({status:"OK",data:Object.fromEntries(partido)})
     } catch (error) {
-        res.status(error.status || 500).send({status:"FAILED",message:error.message})
+        res.status(error.status || 500).send({status:"FAILEDS",message:error.message})
     }
     
 }
@@ -24,7 +24,7 @@ const getMatchesPending = async(req,res)=>{
         const partidos =  await adapter.getPendingMatchesTrue();
     res.status(200).send({status:"OK",data:Object.entries(partidos)})
     } catch (error) {
-        res.status(error.status || 500).send({status:"FAILED",message:error.message})
+        res.status(error.status || 500).send({status:"FAILEDS",message:error.message})
     }
     
 }
