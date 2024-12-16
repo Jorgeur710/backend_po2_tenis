@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = reqire('cors');
+const cors = require('cors');
 const port = process.env.PORT || 3000;
 const routes = require('./v1/routes/tenis_routes');
 
